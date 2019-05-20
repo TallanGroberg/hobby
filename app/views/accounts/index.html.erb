@@ -1,3 +1,14 @@
 <%= button_to 'log out', destroy_user_session_path, method: :delete %>
+<%= link_to 'add hobby', new_account_path %>
 
-<h2>Welcome <%= current_user.firstname %></h2>
+<h2>Welcome <%= current_user.first_name %> <%= current_user.last_name %>, this is a great place to talk about your hobbies!</h2>
+
+
+<% @accounts.each do |account| %>
+<ul>
+  <li><h2><%= account.name %></h2><br><h3><em><%= account.comment %></em></h3></li>
+
+<%= link_to 'edit', edit_account_path(account) %>
+<%= link_to 'delete', account_path(account.id), method: :delete %>
+<% end %>
+</ul>
