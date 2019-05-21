@@ -1,5 +1,5 @@
 <%= button_to 'log out', destroy_user_session_path, method: :delete %>
-<%= link_to 'add hobby', new_account_path %>
+<%= link_to 'add hobby', new_account_path, class: "btn green-darken-4" %>
 
 <h2>Welcome <%= current_user.first_name %> <%= current_user.last_name %>, this is a great place to talk about your hobbies!</h2>
 

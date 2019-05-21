@@ -17,8 +17,10 @@ class AccountsController < ApplicationController
   end
 
   def create
+
     @account = current_user.accounts.new(account_params)
     if @account.save
+      flash[:success] = "account #{@account.name} Created"
       redirect_to accounts_path
     else
       render :new
@@ -26,6 +28,7 @@ class AccountsController < ApplicationController
   end
 
     def update
+
       if @account.update(account_params)
         redirect_to accounts_path
       else
@@ -48,4 +51,5 @@ class AccountsController < ApplicationController
   def set_account
     @account = current_user.accounts.find(params[:id])
   end
+  flash = { success: "It Worked", error: "It Didn't Work" }
 end

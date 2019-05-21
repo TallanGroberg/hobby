@@ -1,0 +1,18 @@
+.alert {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.alert-success {
+  color: rgb(96, 230, 49);
+  background-color: rgb(154, 219, 127);
+  border-color: rgb(26, 50, 28)
+
+}
+.alert-error {
+  color: rgb(221, 26, 20);
+  background-color: rgb(204, 75, 75);
+  border-color: rgb(56, 16, 16);
+}
